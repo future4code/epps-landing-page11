@@ -77,7 +77,7 @@ nav {
 /* PRODUTOS  */
 
 #nossosprodutos{
-    background-color:  #83969C ;
+    background-color:#83969C;
     display: grid;
     height: 100vh;
 }
@@ -102,6 +102,7 @@ nav {
     border-radius: 8px;
 
 }
+
 
 .nomenossosprodutos{
     margin-top: 5%;
@@ -142,6 +143,84 @@ nav {
 
 /* EQUIPE  */
 
+/* CONTATO  */
+
+.informação {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.informação .imgitem {
+    width: 30%;
+    height: 160px;
+    background-color: #353b48;;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.informação img {
+    display: block;
+    font-size: 40px;
+    line-height: 120px;
+    height: 100px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.formulario input {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background-color: #353b48;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#contato {
+    height: 70vh;
+    margin-top: 5%;
+}
+
+.contato1 {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+.nomearea, .emailarea {
+    max-width: 40%;
+}
+
+.assunto {
+    max-width: 87%;
+}
+
+.mensagemarea {
+    min-height: 200px;
+    resize: vertical;
+    max-width: 91%;
+}
+
+.formulario .enviar {
+    display: block;
+    width: 180px;
+    font-size: 16px;
+    padding: 0;
+    margin: auto;
+}
+
+/* CONTATO  */
+
 /* RODAPÉ */
 
 footer{
@@ -162,18 +241,120 @@ footer{
     height: 50px;
 }
 
+.botaoFixo {
+    position: fixed;
+    bottom: 10%;
+    background-color:white;
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.botaoFixo p {
+    text-transform: uppercase;
+    color: black;
+    font-weight: 800;
+    margin-top: 5%;
+    margin-left: 5%;     
+}
+
+.botaoFixo a {
+    text-decoration: none;
+}
+
+.botaoFixo a:hover{
+    color:#3498db;
+}
+
 /* RODAPÉ */
 
-/* CELULARES */
+/* RESPONSIVIDADE */
 
 @media screen and (min-width: 375px) and (max-width: 667px) {
 
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
     nav{
-        width: 375px;
+        width: 100% ;
         height: 80px;
         font-size: 9px;
         display: flex;
         justify-content: center;
+    }
 
+    .quem-container {
+        padding: 50px;
+        width: 100%;
+    }
+
+    .quem-somos {
+        padding: 0;
+    } 
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    #nossaEquipe {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "nomeEquipe"
+        "imgBruno"
+        "nomeBruno"
+        "imgJose"
+        "nomeJose"
+        "imgIgor"
+        "nomeIgor";
+    }
+
+    .nomenossosprodutos {
+        grid-column: span 1;
+    }
+
+    .nomeEquipe {
+        grid-column: span 1;
+        grid-area: auto;
+    }
+    .imgBruno {
+        grid-area: imgBruno;
+    }
+    .nomeBruno {
+        grid-area: nomeBruno;
+    }
+    .imgJose {
+        grid-area: imgJose;
+    }
+    .nomeJose {
+        grid-area: nomeJose;
+    }
+    .imgIgor {
+        grid-area: imgIgor;
+    }
+    .nomeIgor {
+        grid-area: nomeIgor;
+    }
+
+    #nossaEquipe img {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .botaoFixo {
+        display: none;
+    }   
+}
+
+@media screen and (min-width:1280px){
+    .quem-container{
+        padding: 80px;
     }
 }
+
+/* RESPONSIVIDADE */
